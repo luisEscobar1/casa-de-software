@@ -11,7 +11,22 @@ import java.io.RandomAccessFile;
 public class Principal {
     //metodo para registrar estudiantes
     public void nuevoEstudiante(Estudiantes nombre, Estudiantes  id){       
-   
+    try {
+         // create a new RandomAccessFile with filename test
+         RandomAccessFile raf = new RandomAccessFile("estudiantes.txt", "rw");
+
+         // write something in the file
+         raf.writeUTF(nombre.getNombre()+"--->"+nombre);
+         raf.writeUTF(id.getId()+"--->"+id);
+         // set the file pointer at 0 position
+         raf.seek(0);
+
+         // print the string
+         System.out.println("" + raf.readUTF());
+      } catch (IOException ex) {
+         ex.printStackTrace();
+      }
+    
     }
     
     //metodo para inscribir materias
