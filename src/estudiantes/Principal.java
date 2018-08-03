@@ -23,7 +23,7 @@ public class Principal {
          RandomAccessFile raf = new RandomAccessFile("Cursos.txt", "rw");
 
          // write something in the file
-         raf.writeUTF(es1.getNombre()+"--->"+m);
+         raf.writeUTF(es1.getNombre()+"--->"+m.getNombre()+"---->"+m.getCodigo());
 
          // set the file pointer at 0 position
          raf.seek(0);
