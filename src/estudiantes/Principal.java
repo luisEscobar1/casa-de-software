@@ -14,5 +14,7 @@ public class Principal {
     }
     
     //metodo para inscribir materias
+    public void inscribirCursos(){
     
+    }
 }
