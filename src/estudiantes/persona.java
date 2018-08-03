@@ -7,10 +7,9 @@ package estudiantes;
 
 /**
  *
- * @author jonathan carrascal
- * 
+ * @author LabingXEON
  */
-public class Estudiantes extends persona{
-// hereda de una clase de personas, esta el administrador y el estudiante
-    public matricula matr;
+public class persona {
+    public String nombre;
+    public int id;
 }
