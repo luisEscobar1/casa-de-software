@@ -1,5 +1,6 @@
 package estudiantes;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Scanner;
@@ -15,6 +16,34 @@ public class Principal {
     String n = sc.nextLine();
     int id = sc.nextInt();
 
+    
+    
+    
+    public void buscarE() throws FileNotFoundException, IOException {
+       int i=sc.nextInt();
+        
+        RandomAccessFile raf = new RandomAccessFile("estudiantes.txt", "r");
+        raf.seek(0);
+        if(raf.read()==i){
+            raf.skipBytes(4);
+            System.out.println( raf.readUTF());
+            
+        }else{
+            for(int I=0;i<raf.length();i++){
+               int a=24;
+                
+                if(raf.readByte()==id){
+                    raf.seek(a);
+                    System.out.println(raf.readUTF());
+                }
+                a=a+24;
+            }
+        }
+        
+        
+        
+    }
+
     public void nuevoEstudiante(String n, int id) {
         char carac[] = new char[20];
         Estudiantes e = new Estudiantes(n, id);
@@ -23,15 +52,18 @@ public class Principal {
         }
 
         try {
+
             // create a new RandomAccessFile with filename test
             RandomAccessFile raf = new RandomAccessFile("estudiantes.txt", "rw");
-            for (int i = 0; i < carac.length;i++) {
-                raf.writeChar(carac[i]);
+            raf.writeByte(id);
+            
+          
+            for (int i = 0; i < carac.length; i++) {
+                raf.writeUTF(String.valueOf(carac));
 
             }
-            raf.writeByte(id);
-            // write something in the file
 
+            // write something in the file
             // set the file pointer at 0 position
             raf.seek(0);
 
