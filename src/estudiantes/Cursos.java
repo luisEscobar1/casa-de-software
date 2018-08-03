@@ -32,7 +32,7 @@ public class Cursos {
         this.mimateria = mimateria;
     }
 
-    public CursosJhanuar(String grupo, Materia mimateria) {
+    public Cursos(String grupo, Materia mimateria) {
         this.grupo = grupo;
         this.mimateria = mimateria;
     }
