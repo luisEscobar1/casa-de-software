@@ -13,4 +13,14 @@ package estudiantes;
 public class Estudiantes extends persona{
 // hereda de una clase de personas, esta el administrador y el estudiante
     public matricula matr;
+
+    public Estudiantes( String nombre,int id) {
+        
+        this.nombre=nombre;
+        this.id=id;
+        
+    }
+
+
+
 }
