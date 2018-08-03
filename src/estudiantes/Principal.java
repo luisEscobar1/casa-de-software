@@ -10,10 +10,8 @@ import java.io.RandomAccessFile;
  */
 public class Principal {
     //metodo para registrar estudiantes
-    public void nuevoEstudiante(persona nombre, persona id){       
-    
-    
-    
+    public void nuevoEstudiante(Estudiantes nombre, Estudiantes  id){       
+   
     }
     
     //metodo para inscribir materias
