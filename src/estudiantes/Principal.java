@@ -17,7 +17,7 @@ public class Principal {
     }
     
     //metodo para inscribir materias
-    public void inscribirCursos(materia m, Estudiantes es1){
+    public void inscribirCursos(Materia m, Estudiantes es1){
      try {
          // create a new RandomAccessFile with filename test
          RandomAccessFile raf = new RandomAccessFile("Cursos.txt", "rw");

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package copia;
+package estudiantes;
 
 import estudiantes.Estudiantes;
 import estudiantes.Materia;
@@ -17,15 +17,16 @@ import java.util.ArrayList;
  *
  * @author Labing I5
  */
-public class Cursos {
+public class CursosJhanuar {
 
     public String grupo;
     public Materia mimateria;
     public ArrayList<Estudiantes> misestudiantes;
     boolean finArchivo = false;
     RandomAccessFile archivo = null;
+    Estudiantes
     
-    public Cursos() {
+    public CursosJhanuar() {
         
         
 
@@ -38,8 +39,8 @@ public class Cursos {
                 try {
                     c = (char) archivo.readByte();
                     if (c == 'i') {
-                        archivo.seek(archivo.getFilePointer() – 1);
-                        archivo.writeByte(Character.toUpperCase(c));
+                       archivo.seek(archivo.getFilePointer() – 1);
+                       archivo.writeByte(Character.toUpperCase(c));
                     }
                 } catch (EOFException eof) {
                     finArchivo = true;
